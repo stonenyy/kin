@@ -9,5 +9,5 @@ RUN php -r "readfile('http://getcomposer.org/installer');" | php -- --install-di
 
 WORKDIR /var/www/html
 
-RUN composer update --no-scripts
+# RUN composer update --no-scripts
 RUN chown -R www-data:www-data /var/www/
