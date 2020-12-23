@@ -4,7 +4,7 @@ RUN apk update && apk add bash
 RUN set -ex \
     && apk --no-cache add \
     mysql-dev
-RUN docker-php-ext-install pdo pdo_mysql sqlite3 pdo_sqlite
+RUN docker-php-ext-install pdo sqlite3 pdo_sqlite
 RUN php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer
 
 WORKDIR /var/www/html
